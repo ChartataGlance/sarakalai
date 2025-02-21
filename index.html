@@ -10,21 +10,22 @@
 </head>
 
 <body>
+    <img src="5p.png" alt="">
     <h1 class="pos-center-abs">sarakalai</h1>
+    <h1 class="pos-center-abs" id="demo"></h1>
     <script>
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                function (position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-                },
-                function (error) {
-                    console.error(`Error Code = ${error.code} - ${error.message}`);
-                }
-            );
-        } else {
-            console.error("Geolocation is not supported by this browser.");
+        const x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
         }
 
     </script>
