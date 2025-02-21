@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Sarakalai</title>
 </head>
+
 <body>
-    <h1>sarakalai</h1>
+    <h1 class="pos-center-abs">sarakalai</h1>
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+                },
+                function (error) {
+                    console.error(`Error Code = ${error.code} - ${error.message}`);
+                }
+            );
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+
+    </script>
+    <script src="sunCalc.js"></script>
 </body>
+
 </html>

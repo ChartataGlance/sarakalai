@@ -1,6 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 *,
 *::before,
@@ -98,7 +98,7 @@ picture {
   --clr7: hsl(220, 35%, 20%);
   --clr8: hsl(220, 70%, 15%);
 
-  --bgclr: hsl(220, 70%, 15%);
+  --bgclr: hsl(244, 80%, 8%);
   --brclr: hsl(200, 52%, 55%);
 
   --box-shadow: rgba(108, 108, 126, 0.1) 0px 4px 16px,
@@ -114,74 +114,12 @@ body {
   min-width: 440px;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  /* background-color: rgb(161, 171, 16); */
-  /* background: var(--bgclr);
-  background: linear-gradient(#ff0000, #80b40f, #0eaeb0, #aa13af, #ff0000); 
-  background: url(src/patchi/bc.jfif);
-  background-size: 1000% 2600%;
-  background-position: 500% 0%; 
-  animation: backcolor 9s linear infinite reverse; */
+  background: var(--bgclr);
+
 }
 
-.animatebg {
-  -webkit-user-select: none;
-  /* Safari */
-  -ms-user-select: none;
-  /* IE 10 and IE 11 */
-  user-select: none;
-  /* Standard syntax */
-  pointer-events: none;
-  font-family: "ubuntu", sans-serif;
-  background-image: url(src/logo/animatebg.png);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: backcolor 9s linear infinite reverse;
-  font-size: 1.5rem;
-  text-shadow: rgba(21, 10, 83, 0.5) 5px 5px 9px,
-    rgba(21, 10, 83, 0.1) 2px 2px 2px;
-}
 
-.animatedesc {
-  -webkit-user-select: none;
-  /* Safari */
-  -ms-user-select: none;
-  /* IE 10 and IE 11 */
-  user-select: none;
-  /* Standard syntax */
-  pointer-events: none;
-  font-family: "ubuntu", sans-serif;
-  background-image: url(/src/logo/bganimate1.svg);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: desc 8s linear infinite reverse;
-  font-size: 1.5rem;
 
-  text-shadow: rgba(21, 10, 83, 0.5) 5px 5px 9px,
-    rgba(21, 10, 83, 0.1) 2px 2px 2px;
-  position: relative;
-}
-
-@keyframes desc {
-  0% {
-    background-position: 0 120%;
-  }
-
-  100% {
-    background-position: 0 0%;
-  }
-}
-
-@keyframes backcolor {
-  0% {
-    background-position: 0 120%;
-  }
-
-  100% {
-    background-position: 0 0%;
-  }
-}
 
 /* Nav */
 nav {
@@ -209,27 +147,19 @@ nav li a {
   color: aliceblue;
 }
 
-/* Form Element */
 
-.animateqr {
-  background-color: rgb(226, 234, 234);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  pointer-events: none;
-  text-shadow: rgba(21, 10, 83, 0.5) 5px 5px 9px,
-    rgba(21, 10, 83, 0.1) 2px 2px 2px;
-}
+
 
 /* Greeting Text after Subscribed */
 .pos-center-abs {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 2%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
+  font-size: 5rem;
+  color: aliceblue;
+  font-family: var(--ubuntu);
+  text-transform: capitalize;
+
 }
 
-.headerimg {
-  width: 333px;
-  margin: 0 auto;
-}
