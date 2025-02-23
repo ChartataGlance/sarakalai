@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+   
 
     <title>Sarakalai</title>
 </head>
@@ -12,7 +13,12 @@
 <body>
     <img src="5p.png" alt="">
     <h1 class="pos-center-abs">sarakalai</h1>
-    <h1 class="pos-center-abs" id="demo"></h1>
+    <h1  id="clock"></h1>
+    <center>
+            <h1 style="color: aliceblue; " class="date"></h1>
+    <h2 style="color: aliceblue; font-size: 7rem; " class="time"></h2>
+    </center>
+
     <script>
         const x = document.getElementById("demo");
         function getLocation() {
@@ -30,6 +36,26 @@
 
     </script>
     <script src="sunCalc.js"></script>
+
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = h + ":" + m + ":"  + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+    </script>
+ <script src="jstimedate.js"></script>
 </body>
 
 </html>
